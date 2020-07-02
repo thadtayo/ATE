@@ -30,10 +30,12 @@ def get_daily(symbol, n=100):
     else:
         stock, meta = ts.get_daily(symbol=symbol, outputsize='compact')
 
+    return stock, meta
     
 
 
 
 if __name__ == '__main__':
-    get_daily(sys.argv[1], int(sys.argv[2]))
+    get_daily(sys.argv[1], sys.argv[2])
+
     
