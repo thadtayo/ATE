@@ -23,7 +23,7 @@ def get_daily(symbol, n=100):
     # run full mode
     stock = {}
     meta = {}
-    if n == 'full' or n > 100:
+    if n == 'full' or int(n) > 100:
         stock, meta = ts.get_daily(symbol=symbol, outputsize='full')
 
     # run compact mode
@@ -36,6 +36,6 @@ def get_daily(symbol, n=100):
 
 
 if __name__ == '__main__':
-    get_daily(sys.argv[1], sys.argv[2])
+    print(get_daily(sys.argv[1], sys.argv[2]))
 
     
